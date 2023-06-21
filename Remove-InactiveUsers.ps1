@@ -33,7 +33,7 @@ Write-Output "Exported a list of all inactive users to $ExportPath"
 # confrm whether want to disable inactive users
 $disableconfirmation = Read-Host "Do you want to disable all $staleusers inactive users? - requires domain admin privileges (Y/N)"
 
-if ($disableconfirmation -eq 'Y') {
+if ($disableconfirmation.ToUpper() -eq 'Y') {
   # Disable Inactive Users
   ForEach ($Item in $staleusers){
     Disable-ADAccount -Identity $Item.DistinguishedName
