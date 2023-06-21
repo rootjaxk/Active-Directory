@@ -2,7 +2,8 @@
 Just some dirty scripts for cleaning up a messy AD environment
 - Remove-EmptyOUs.ps1 will find all empty OUs then delete them
 - Remove-UnlinkedGPO.ps1 will find all GPOs that have no link to anything (run after deleting emptyOUs), then delete them
+- Remove-EmptyGroups.ps1 will find all empty groups then delete them
+- Remove-InactiveUsers will find all users that have not logged in past 90 days then disable / delete them
 
 To do 
-- Empty groups
-- Stale users / computers (haven't logged in in last 90 days / never logged on / expired accounts)
+- Stale computers accounts
