@@ -1,2 +1,2 @@
 # Active-Directory
-Some dirty scripts for cleaning up a messy AD environment
+Just some dirty scripts for cleaning up a messy AD environment
