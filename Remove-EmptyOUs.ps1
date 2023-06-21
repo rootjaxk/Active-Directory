@@ -1,3 +1,4 @@
+# Ensure a system state backup of the domain is available for recovery before running
 Import-Module ActiveDirectory
 
 # Find total amount of OUs
