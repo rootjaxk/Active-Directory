@@ -5,4 +5,4 @@ Just some dirty scripts for cleaning up a messy AD environment
 
 To do 
 - Empty groups
-- Stale users
+- Stale users / computers (haven't logged in in last 90 days / never logged on / expired accounts)
