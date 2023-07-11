@@ -28,11 +28,9 @@ if (-Not(Test-Path -Path $BackupDir))  {
 
 # Backup loop
 ForEach ($Item in $unlinkedGPOs) {  
-  # Backup the GPO, HTML report and saving the GPO details to text file are optional.
+  # Backup the GPO & HTML report to preserve GPO details
   Write-Output "Backing up $Item.DisplayName to $BackupDir"
   Backup-GPO -Name $Item.DisplayName -Path $BackupDir
- 
-  # Create a report of unlinked GPOs and save as an HTML report to backup folder
   Get-GPOReport -Name $Item.DisplayName -ReportType Html -Path "$BackupDir\$($Item.DisplayName).html"
 }
 Write-Output "All unlinked GPOs backedup! Review $BackupDir for confirmation"
